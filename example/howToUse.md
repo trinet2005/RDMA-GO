@@ -9,7 +9,7 @@ gcc -shared -o libwrapper.so wrapper.o
 
 ```go
 /*
-#cgo LDFLAGS: -libverbs
+#cgo LDFLAGS: -libverbs -L. -lwrapper
 */
 import "C"
 ```
