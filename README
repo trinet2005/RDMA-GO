@@ -1,0 +1,20 @@
+//配置虚拟rdma网卡
+sudo rdma link add rxe_0 type rxe netdev enp0s3
+
+
+//更新wrapper库
+gcc -c -o wrapper.o wrapper.c
+gcc -shared -o libwrapper.so wrapper.o
+go build -o main main.go
+
+
+//config example
+{
+  "mode": "client",
+  "port": "12345",
+  "address": "192.168.3.32:12345",
+  "debug": true,
+  "mr_size": 1024,
+  "device_name": "rxe_0",
+  "file_name": "./testfile.txt"
+}
