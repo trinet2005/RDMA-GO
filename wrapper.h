@@ -2,7 +2,7 @@
 
 #ifndef WRAPPER_H
 #define WRAPPER_H
-
+#define uint unsigned int
 #include <infiniband/verbs.h> // 包含内联函数的头文件
 
 // 声明包装函数
