@@ -2,6 +2,7 @@
 
 #include <infiniband/verbs.h>
 #include <stdio.h>
+#define uint unsigned int
 // package the ibv_query_port function
 int ibv_query_port_wrapper(struct ibv_context *context,
        uint8_t port_num,struct ibv_port_attr *port_attr){
